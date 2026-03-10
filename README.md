@@ -87,7 +87,7 @@ Assistant: Goodbye!
 
 (`quit` also exits.)
 
-## Example Tasks (A-E)
+## Tasks (A-E)
 Use these tasks as a quick demo/acceptance checklist.
 
 1. Task A (Persona)
@@ -114,34 +114,3 @@ Use these tasks as a quick demo/acceptance checklist.
 5. Task E (Error Handling)
    - Input: `What is the price of GOOG?`
    - Expected: Handles unknown data gracefully (for example, `Data not found`) without crashing.
-
-## How It Works
-1. User input is appended to conversation history.
-2. First LLM call is made with tool schemas from `schemas.py` (`TOOLS`).
-3. If tool calls are returned, local functions in `tools.py` are executed.
-4. Tool results are appended to history.
-5. Second LLM call generates the final user-facing answer.
-
-## Manual Verification Checklist
-1. Fresh start:
-   - Follow installation and `.env` setup from this README.
-   - Run `python main.py` and confirm startup banner appears.
-2. Functional checks:
-   - Ask for `AAPL` stock price.
-   - Ask for `USD_TWD` exchange rate.
-   - Ask for an unknown symbol or pair and confirm graceful error messaging.
-3. Debug check:
-   - Run `python main.py --debug`.
-   - Confirm debug logs show user input, tool calls, tool args, and tool results.
-4. Consistency:
-   - Confirm command names, file names, and env var names match source code.
-
-## Current Limitations
-- Data is mock/static in `tools.py` (not real-time market data).
-- Conversation history is in-memory only and resets when the process restarts.
-- No automated test suite is currently included in this repo.
-
-## Future Improvements
-- Integrate real market/FX APIs
-- Add automated tests
-- Add persistent conversation memory
