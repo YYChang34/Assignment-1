@@ -21,7 +21,8 @@ financial-agent/
 ├── agent.py       # OpenAI client calls, tool-calling flow, message state
 ├── tools.py       # Local mock data + tool implementations
 ├── schemas.py     # Tool schemas passed to the model
-├── .gitignore 
+├── .gitignore
+├── .env.example 
 └── requirements.txt
 ```
 
