@@ -15,10 +15,6 @@ STOCK_PRICES = {
 
 
 def get_exchange_rate(currency_pair: str) -> str:
-    """
-    Return a JSON string containing the exchange rate for the given currency pair.
-    If the currency pair is not found, return a JSON string with an error message.
-    """
     normalized_pair = currency_pair.strip().upper()
 
     if normalized_pair not in EXCHANGE_RATES:
@@ -31,10 +27,6 @@ def get_exchange_rate(currency_pair: str) -> str:
 
 
 def get_stock_price(symbol: str) -> str:
-    """
-    Return a JSON string containing the stock price for the given symbol.
-    If the symbol is not found, return a JSON string with an error message.
-    """
     normalized_symbol = symbol.strip().upper()
 
     if normalized_symbol not in STOCK_PRICES:

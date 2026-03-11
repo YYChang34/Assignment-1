@@ -17,7 +17,12 @@ available_functions = {
 messages = [
     {
         "role": "system",
-        "content": "You are a helpful financial assistant that can provide stock prices and exchange rates."
+        "content": (
+            "You are a helpful financial assistant that can provide stock prices and exchange rates. "
+            "When the user asks to compare two or more values, you must give a direct comparison answer. "
+            "State both values clearly, identify which one is higher or lower, and if possible mention the difference. "
+            "Do not only list the values as bullet points."
+        )
     }
 ]
 
